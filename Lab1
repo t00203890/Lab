@@ -1,0 +1,26 @@
+//The Fibonacci sequence.
+//Fibonacci is a sequence where each number is the sum of the last two.
+void setup() {
+  delay(3000);
+  loopsFib(40);
+}
+void loop() {
+}
+void loopsFib(int n) {
+ if (n <= 1) {
+  }
+  long long int curr_val = 0;
+  long long int prev1 = 1;
+  long long int prev0 = 0;
+
+  Serial.print("Loops: 0,1, ");
+
+  for (int i = 2; i < n; i++) {
+    curr_val = prev0 + prev1;
+    prev0 = prev1;
+    prev1 = curr_val;
+    Serial.println(curr_val);
+    Serial.print(", ");
+  }
+  Serial.print("!Complete!");
+}
